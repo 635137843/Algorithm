@@ -11,11 +11,12 @@ public class InsertionSort3<E extends Comparable<E>> extends Sort<E> {
     @Override
     protected void sort() {
         for (int begin = 0; begin < array.length; begin++) {
+            System.out.println("aa");
             search(begin);
         }
     }
 
     private int search(int index){
-        return 1;
+        return 12;
     }
 }
