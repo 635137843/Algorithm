@@ -14,7 +14,7 @@ public class InsertionSort3<E extends Comparable<E>> extends Sort<E> {
         for (int begin = 0; begin < array.length; begin++) {
             System.out.println("aa");
             search(begin);
-            System.out.println("合并");
+            System.out.println("冲突");
         }
     }
 
