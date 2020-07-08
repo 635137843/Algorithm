@@ -10,9 +10,11 @@ package com.hmx.sort;
 public class InsertionSort3<E extends Comparable<E>> extends Sort<E> {
     @Override
     protected void sort() {
+        int a = 0;
         for (int begin = 0; begin < array.length; begin++) {
             System.out.println("aa");
             search(begin);
+            System.out.println("合并");
         }
     }
 
