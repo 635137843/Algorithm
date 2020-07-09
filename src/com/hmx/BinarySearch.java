@@ -8,6 +8,13 @@ package com.hmx;
  * @Version 1.0
  **/
 public class BinarySearch {
+
+    /**
+     * 二分搜索
+     * @param array
+     * @param v
+     * @return
+     */
     public static int indexOf(int[] array, int v) {
         if (array == null || array.length == 0) return -1;
         int begin = 0;

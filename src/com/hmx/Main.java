@@ -16,8 +16,8 @@ import java.util.Arrays;
 @SuppressWarnings("rawtypes")
 public class Main {
     public static void main(String[] args) {
-//        Integer[] array = Integers.random(10000, 1, 20000);
-        int[] array = {2,4,8,8,8,12,14};
+        Integer[] array = Integers.random(10000, 1, 20000);
+//        int[] array = {2,4,8,8,8,12,14};
 //        for (int j = 0; j < array.length-1; j++) {
 //            for (int i = 0; i < array.length-1-j; i++) {
 //                if(array[i] > array[i+1]){
@@ -28,18 +28,20 @@ public class Main {
 //            }
 //        }
 
-//        testSorts(array,
-//                new BubbleSort3(),
-//                new HeapSort(),
-//                new SelectionSort(),
-//                new InsertionSort1(),
-//                new InsertionSort2()
-//        );
+        testSorts(array,
+                new BubbleSort3(),
+                new HeapSort(),
+                new SelectionSort(),
+                new InsertionSort1(),
+                new InsertionSort2(),
+                new InsertionSort3()
+        );
 
-        Asserts.test(BinarySearch.search(array, 5) == 2);
-        Asserts.test(BinarySearch.search(array, 1) == 0);
-        Asserts.test(BinarySearch.search(array, 15) == 7);
-        Asserts.test(BinarySearch.search(array, 8) == 5);
+
+//        Asserts.test(BinarySearch.search(array, 5) == 2);
+//        Asserts.test(BinarySearch.search(array, 1) == 0);
+//        Asserts.test(BinarySearch.search(array, 15) == 7);
+//        Asserts.test(BinarySearch.search(array, 8) == 5);
     }
 
     static void testSorts(Integer[] array, Sort... sorts) {
