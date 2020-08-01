@@ -16,7 +16,7 @@ import java.util.Arrays;
 @SuppressWarnings("rawtypes")
 public class Main {
     public static void main(String[] args) {
-        Integer[] array = Integers.random(10000, 1, 20000);
+        Integer[] array = Integers.random(1000, 1, 20000);
 //        int[] array = {2,4,8,8,8,12,14};
 //        for (int j = 0; j < array.length-1; j++) {
 //            for (int i = 0; i < array.length-1-j; i++) {
@@ -34,7 +34,8 @@ public class Main {
                 new SelectionSort(),
                 new InsertionSort1(),
                 new InsertionSort2(),
-                new InsertionSort3()
+                new InsertionSort3(),
+                new MergeSort()
         );
 
 
