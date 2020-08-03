@@ -37,15 +37,10 @@ public class MergeSort<T extends Comparable<T>> extends Sort<T> {
 
         //如果左边没有结束
         while(li < le){
-            /*if(!(ri < re && cmp(array[ri], leftArray[li]) < 0)){
-                array[ai++] = leftArray[li++];
-            }else{
+            if(ri < re && cmp(array[ri], leftArray[li]) < 0){
                 array[ai++] = array[ri++];
-            }*/
-            if(ri >= re && cmp(leftArray[li], array[ri]) <= 0){
-                array[ai++] = leftArray[li++];
             }else{
-                array[ai++] = array[ri++];
+                array[ai++] = leftArray[li++];
             }
         }
 
