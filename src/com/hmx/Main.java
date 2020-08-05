@@ -3,6 +3,7 @@ package com.hmx;
 import com.hmx.sort.*;
 import com.hmx.tools.Asserts;
 import com.hmx.tools.Integers;
+import com.hmx.union.UnionFind;
 
 import java.util.Arrays;
 
@@ -16,7 +17,7 @@ import java.util.Arrays;
 @SuppressWarnings("rawtypes")
 public class Main {
     public static void main(String[] args) {
-        Integer[] array = Integers.random(30000, 1, 50000);
+        //Integer[] array = Integers.random(50000, 1, 50000);
         //Integer[] array = {3,6,11,18,8,10,12,14};
         //Integer[] array = {8,7,6,5,4,3,2,1};
 //        for (int j = 0; j < array.length-1; j++) {
@@ -28,18 +29,18 @@ public class Main {
 //                }
 //            }
 //        }
-
-        testSorts(array,
-                new HeapSort(),
-                /*new BubbleSort3(),
+        /*testSorts(array,
+                *//*new HeapSort(),
+                new BubbleSort3(),
                 new SelectionSort(),
                 new InsertionSort1(),
-                new InsertionSort2(),*/
-                new InsertionSort3(),
+                new InsertionSort2(),
+                new InsertionSort3(),*//*
                 new MergeSort(),
-                new QuickSort(),
-                new ShellSort()
-        );
+                new QuickSort()
+        );*/
+        unionFind();
+
 
 
 //        Asserts.test(BinarySearch.search(array, 5) == 2);
@@ -114,5 +115,26 @@ public class Main {
             array[maxIndex] = array[j];
             array[j] = tmp;
         }
+    }
+
+    static void unionFind() {
+        UnionFind unionFind = new UnionFind(12);
+        unionFind.union(0, 1);
+        unionFind.union(0, 3);
+        unionFind.union(0, 4);
+        unionFind.union(2, 3);
+        unionFind.union(2, 5);
+
+        unionFind.union(6, 7);
+
+        unionFind.union(8, 10);
+        unionFind.union(9, 10);
+        unionFind.union(8, 11);
+
+        unionFind.union(4,6);
+
+        System.out.println(unionFind.isSame(0, 6));
+        System.out.println(unionFind.isSame(0, 5));
+        System.out.println(unionFind.isSame(0, 7));
     }
 }
