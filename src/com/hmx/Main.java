@@ -4,6 +4,8 @@ import com.hmx.sort.*;
 import com.hmx.tools.Asserts;
 import com.hmx.tools.Integers;
 import com.hmx.union.UnionFind;
+import com.hmx.union.UnionFind_QF;
+import com.hmx.union.UnionFind_QU;
 
 import java.util.Arrays;
 
@@ -118,7 +120,7 @@ public class Main {
     }
 
     static void unionFind() {
-        UnionFind unionFind = new UnionFind(12);
+        UnionFind unionFind = new UnionFind_QU(12);
         unionFind.union(0, 1);
         unionFind.union(0, 3);
         unionFind.union(0, 4);
