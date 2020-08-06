@@ -34,6 +34,8 @@ public class InsertionSort3<E extends Comparable<E>> extends Sort<E> {
     }
 
     private int search(int index){
+        System.out.println("");
+        return 1;
         int begin = 0;
         int end = index;
         while(begin < end){
